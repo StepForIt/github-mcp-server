@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
       args:
         VERSION: ${VERSION:-dev}
-    command: ["http"]
+    command: ["http", "--base-url", "https://githubmcp.srv715024.hstgr.cloud"]
     environment:
       GITHUB_PERSONAL_ACCESS_TOKEN: ${GITHUB_PERSONAL_ACCESS_TOKEN}
     restart: unless-stopped
